@@ -3,7 +3,6 @@ import randomWords from "random-words";
 import './App.css';
 import TopNav from './components/TopNav';
 import Timer from "./components/Timer.jsx";
-import TimerDisplay from './components/TimerDisplay';
 import UserInput from './components/UserInput.jsx';
 import WordDisplay from './components/WordDisplay.jsx';
 import StatusControls from './components/StatusControls.jsx';
