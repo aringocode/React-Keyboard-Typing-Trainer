@@ -8,6 +8,7 @@ function WordDisplay({ words, charIndex, wordIndex, char }) {
 		if (isCurrentWord && CharInd === charIndex) {
 			return isCorrect ? 'has-background-success' : 'has-background-danger';
 		}
+
 		return isCurrentWord && charIndex >= words[wordIndex].length ? 'has-background-danger' : '';
 	};
 
@@ -15,13 +16,12 @@ function WordDisplay({ words, charIndex, wordIndex, char }) {
 		<div className='randomWords'>
 			{words?.map((word, i) => (
 				<span key={i}>
-          {word.split('').map((char, idx) => (
-			  <span className={getCharClass(i, idx)} key={idx}>
-              {char}
-            </span>
-		  ))}
-					<span> </span>
-        </span>
+					{word.split('').map((char, idx) => (
+			  			<span className={getCharClass(i, idx)} key={idx}>
+              				{char}
+            			</span>
+					))}
+				</span>
 			))}
 		</div>
 	);

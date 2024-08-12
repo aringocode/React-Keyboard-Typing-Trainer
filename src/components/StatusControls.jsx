@@ -8,19 +8,19 @@ function StatusControls({ status, wordNums, setWordNums, startTimer, isChecked, 
 				<div className='selectTimeWord'>
 					<TimePeriod setTimer={setTimer} />
 					<span>
-            <span>Words Count : </span>
-            <input
-				className='inputword'
-				type='number'
-				value={wordNums}
-				onChange={(event) => setWordNums(event.target.value)}
-			/>
-          </span>
+            			<span>Words Count : </span>
+						<input
+							className='inputword'
+							type='number'
+							value={wordNums}
+							onChange={(event) => setWordNums(event.target.value)}
+						/>
+          			</span>
 					<span>
-            <span>Keyboard Sound : </span>
-            <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
-            <label> ON</label>
-          </span>
+						<span>Keyboard Sound : </span>
+						<input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+						<label> ON</label>
+          			</span>
 				</div>
 			)}
 			{status === 'start' && (

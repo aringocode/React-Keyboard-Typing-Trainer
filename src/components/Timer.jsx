@@ -8,13 +8,11 @@ const Timer = (props) => {
 			{(props.status === 'enable' || props.status === 'start') && (
 				<>
 					<span className='timerCount'>{props.timer}</span>
-
 					<span className='timerText'>seconds</span>
 				</>)}
 			{props.status === 'disable' && (
 				<>
 					<span className='Oops'>Oops, Time Up</span>
-
 					<span className='timerText'>Check your results, and hit retry</span>
 				</>)}
 		</div>
