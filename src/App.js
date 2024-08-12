@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import randomWords from "random-words";
 import './App.css';
 import TopNav from './components/TopNav';
+import Timer from "./components/Timer.jsx";
 import TimerDisplay from './components/TimerDisplay';
 import UserInput from './components/UserInput.jsx';
 import WordDisplay from './components/WordDisplay.jsx';
@@ -96,7 +97,7 @@ function App() {
 	return (
 		<>
 			<TopNav />
-			<TimerDisplay status={status} timer={timer} />
+			<Timer status={status} timer={timer}/>
 			{status === 'enable' && (
 				<UserInput
 					status={status}

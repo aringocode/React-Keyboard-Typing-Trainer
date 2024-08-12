@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WordDisplay({ words, charIndex, wordIndex, char }) {
+function WordDisplay({ words, charIndex, wordIndex, char = '' }) {
 	const getCharClass = (wordInd, CharInd) => {
 		const isCurrentWord = wordInd === wordIndex;
 		const isCorrect = char && words[wordIndex][CharInd] === char;
