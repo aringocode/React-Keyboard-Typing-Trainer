@@ -1,9 +1,10 @@
 import React from 'react';
+import { Input } from "reactstrap";
 
 function UserInput({ status, inputWord, handleInput, setInputWord }) {
 	return (
 		<div className='inputSection'>
-			<input
+			<Input
 				placeholder='Type word here and hit spacebar'
 				disabled={status === 'disable'}
 				type='text'

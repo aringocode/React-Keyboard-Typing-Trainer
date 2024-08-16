@@ -1,7 +1,7 @@
 import React from 'react';
 import TimePeriod from "./keyboard-settings/TimePeriod.jsx";
 
-function StatusControls({ status, wordNums, setWordNums, startTimer, isChecked, handleCheckboxChange, setTimer }) {
+function StatusControls({ status, wordNums, setWordNums, startTimer, setTimer }) {
 	return (
 		<>
 			{status === 'start' && (
@@ -15,11 +15,6 @@ function StatusControls({ status, wordNums, setWordNums, startTimer, isChecked, 
 							value={wordNums}
 							onChange={(event) => setWordNums(event.target.value)}
 						/>
-          			</span>
-					<span>
-						<span>Keyboard Sound : </span>
-						<input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
-						<label> ON</label>
           			</span>
 				</div>
 			)}

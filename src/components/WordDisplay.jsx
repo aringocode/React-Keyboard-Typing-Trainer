@@ -15,9 +15,9 @@ function WordDisplay({ words, charIndex, wordIndex, char = '' }) {
 	return (
 		<div className='randomWords'>
 			{words?.map((word, i) => (
-				<span key={i}>
+				<span key={i} className='pe-1'>
 					{word.split('').map((char, idx) => (
-			  			<span className={getCharClass(i, idx)} key={idx}>
+						<span className={getCharClass(i, idx)} key={idx}>
               				{char}
             			</span>
 					))}

@@ -20,9 +20,7 @@ function App() {
 	const [char, setChar] = useState('');
 	const [inCorrect, setInCorrect] = useState(0);
 	const [status, setStatus] = useState('start');
-	const [isChecked, setIsChecked] = useState(true);
 
-	const handleCheckboxChange = () => setIsChecked(!isChecked);
 
 	const startTimer = () => {
 		if (status === 'disable') {
@@ -111,8 +109,6 @@ function App() {
 				wordNums={wordNums}
 				setWordNums={setWordNums}
 				startTimer={startTimer}
-				isChecked={isChecked}
-				handleCheckboxChange={handleCheckboxChange}
 				setTimer={setTimer}
 			/>
 			{status === 'disable' && <GameResults correct={correct} inCorrect={inCorrect} />}
