@@ -13,10 +13,10 @@ function StatusControls({ status, wordNums, setWordNums, startTimer, setTimer })
 	return (
 		<>
 			{status === 'start' && (
-				<FormGroup className='selectTimeWord'>
+				<FormGroup className='justify-content-center'>
 					<Row>
-						<Col sm='1'>
-							<Label>Set countdown : </Label>
+						<Col xs='1'>
+							<Label className='text-nowrap'>Set countdown : </Label>
 							<Input
 								type='number'
 								value={seconds}
@@ -24,7 +24,7 @@ function StatusControls({ status, wordNums, setWordNums, startTimer, setTimer })
 								onChange={numberChange}
 							/>
 						</Col>
-						<Col sm='1'>
+						<Col xs='1'>
 							<Label>Words Count : </Label>
 							<Input
 								type='number'
