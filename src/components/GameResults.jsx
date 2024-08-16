@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Table } from 'reactstrap';
 
 function GameResults({ correct, inCorrect }) {
 	const totalWords = correct + inCorrect;
@@ -6,24 +7,35 @@ function GameResults({ correct, inCorrect }) {
 
 	return (
 		<div className='Result'>
-			<div className='resultportion'>
-				<p className='resultText'>Words Per Minute : </p>
-				<p className='ResultValue'>{totalWords}</p>
-			</div>
-			<div className='resultportion'>
-				<p className='resultText'>Accuracy : </p>
-				<p className='ResultValue'>{accuracy}%</p>
-			</div>
-			<div className='resultportion'>
-				<p className='resultText'>Correct Words : </p>
-				<p className='ResultValue'>{correct}</p>
-			</div>
-			<div className='resultportion'>
-				<p className='resultText'>Incorrect words : </p>
-				<p className='ResultValue'>{inCorrect}</p>
-			</div>
+			<h4 className='resultHeader'>Your Typing Test Results</h4>
+			<Table striped bordered hover>
+				<thead>
+				<tr>
+					<th>Metric</th>
+					<th>Value</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>Words Typed (Total)</td>
+					<td>{totalWords}</td>
+				</tr>
+				<tr>
+					<td>Correct Words</td>
+					<td>{correct}</td>
+				</tr>
+				<tr>
+					<td>Incorrect Words</td>
+					<td>{inCorrect}</td>
+				</tr>
+				<tr>
+					<td>Accuracy</td>
+					<td>{accuracy}%</td>
+				</tr>
+				</tbody>
+			</Table>
 			<div className='buttonRetry'>
-				<button onClick={() => window.location.reload()}>Click here to retry</button>
+				<Button color="primary" onClick={() => window.location.reload()}>Retry</Button>
 			</div>
 		</div>
 	);

@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import randomWords from "random-words";
 import './App.css';
-import TopNav from './components/TopNav';
 import Timer from "./components/Timer.jsx";
 import UserInput from './components/UserInput.jsx';
 import WordDisplay from './components/WordDisplay.jsx';
 import StatusControls from './components/StatusControls.jsx';
 import GameResults from './components/GameResults.jsx';
-import Instructions from './components/Instructions.jsx';
 
 function App() {
 	const [wordNums, setWordNums] = useState(100);
@@ -93,7 +91,6 @@ function App() {
 
 	return (
 		<>
-			<TopNav />
 			<Timer status={status} timer={timer}/>
 			{status === 'enable' && (
 				<UserInput
@@ -112,7 +109,6 @@ function App() {
 				setTimer={setTimer}
 			/>
 			{status === 'disable' && <GameResults correct={correct} inCorrect={inCorrect} />}
-			<Instructions status={status} />
 		</>
 	);
 }
